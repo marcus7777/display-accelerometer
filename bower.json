@@ -1,0 +1,18 @@
+{
+  "name": "display-accelerometer",
+  "version": "1.0.0",
+  "description": "\n    \n    \n    \n  ",
+  "main": "display-accelerometer.html",
+  "keywords": [
+    "polymer",
+    "web-components"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~1.9.3",
+    "smoothie-charts": "*"
+  },
+  "devDependencies": {
+    "iron-test-helpers": "*",
+    "web-component-tester": "^5.0.0"
+  }
+}

@@ -1,0 +1,34 @@
+<link rel="import" href="../smoothie-charts/smoothie-charts.html">
+<link rel="import" href="../polymer/polymer.html">
+<!--
+  `<display-accelerometer></display-accelerometer>` smoothie-charts
+  @demo demo.html
+-->
+<dom-module id="display-accelerometer">
+  <template>
+    <style>:host {display:inline-<block;color:#666}</style>
+    <smoothie-charts rate="160" width="1200" height="350" x="[[x]]" y="[[y]]" z="[[z]]"></smoothie-charts>
+  </template>
+</dom-module>
+<script>
+  Polymer({
+    is: "display-accelerometer",
+    ready: function(undefined){
+      var that = this
+      if ('DeviceMotionEvent' in window) {
+        window.addEventListener('devicemotion', deviceMotionHandler, false);
+      } else {
+        alert('Device motion not supported.');
+      }
+      function deviceMotionHandler(eventData) {
+        // Grab the acceleration including gravity from the results
+        acceleration = eventData.accelerationIncludingGravity
+      
+        that.set("x", acceleration.x)
+        that.set("y", acceleration.y)
+        that.set("z", acceleration.z)
+      
+      }
+    },
+  })
+</script>
