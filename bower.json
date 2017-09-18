@@ -9,7 +9,7 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#~1.9.3",
-    "smoothie-charts": "*"
+    "smoothie-charts": "marcus7777/smoothie-charts"
   },
   "devDependencies": {
     "iron-test-helpers": "*",
